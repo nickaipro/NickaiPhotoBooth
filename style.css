@@ -52,7 +52,19 @@ body {
 }
 #camera {
     width: 300px;
-    border-radius: 40px
+    border-radius: 40px;
+    transform: scaleX(-1)
 
 }
 
+
+#photoCanvas {
+    width: 100%;
+    display: block;
+
+}
+
+#countdown {
+    font-size: 30px;
+    margin-top: 0;
+}
