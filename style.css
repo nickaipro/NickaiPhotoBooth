@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "funFont";
+    src: url("assets/funFont.ttf") format("truetype")
+}
+
+
+body {
+    font-family: "funFont";
+    background-color: rgb(156, 137, 13)
+
+}
+
+#title {
+    font-size: 50px
+}
+
+
+
+#subtitle {
+    color: rgb(85, 3, 112);
+    font-size: 40px;
+    margin-top: 0
+}
+
+#photoBooth {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+
+}
+
+#takePhoto {
+    margin-top: 25px;
+    font-family: "funFont";
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgb(96, 75, 2);
+    border: none;
+}
+
+
+
+#buttonContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+#camera {
+    width: 300px;
+    border-radius: 40px
+
+}
+
