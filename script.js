@@ -5,7 +5,12 @@ const canvasContext = photoCanvas.getContext("2d");
 const photos = [];
 const photoSound = new Audio("assets/photoSound.mp3");
 
+const buttonContainer = document.getElementById("buttonContainer");
 const countdown = document.getElementById("countdown");
+
+const containerResults = document.getElementById("containerResults");
+
+const photoBooth = document.getElementById("photoBooth");
 
 async function oneSecondInterval() {
   await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -45,4 +50,16 @@ async function startCamera() {
   capturePhotos();
   await countDown();
   capturePhotos();
+
+  buttonContainer.style.display = "none";
+
+  photos.forEach((photo) => {
+    const imgPhoto = document.createElement("img");
+    imgPhoto.id = "imgPhoto";
+    imgPhoto.src = photo;
+    imgPhoto.alt = "Your photoBooth images";
+    containerResults.appendChild(imgPhoto);
+  });
+
+  containerResults.style.display = "flex";
 }
