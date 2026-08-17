@@ -3,6 +3,7 @@ const camera = document.getElementById("camera");
 const photoCanvas = document.getElementById("photoCanvas");
 const canvasContext = photoCanvas.getContext("2d");
 const photos = [];
+const photoSound = new Audio("assets/photoSound.mp3");
 
 const countdown = document.getElementById("countdown");
 
@@ -15,6 +16,7 @@ async function countDown() {
   await oneSecondInterval();
   countdown.textContent = 2;
   await oneSecondInterval();
+  photoSound.play();
   countdown.textContent = 1;
   await oneSecondInterval();
 }

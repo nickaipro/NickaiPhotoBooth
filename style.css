@@ -60,7 +60,8 @@ body {
 
 #photoCanvas {
     width: 100%;
-    display: block;
+    display: none;
+    transform: scaleX(-1)
 
 }
 
